@@ -7,7 +7,7 @@ export default defineConfig({
   base: "/Nicole-Website/",
   build: {
     rollupOptions: {
-      external: ['firebase/firestore'], // Add this line
+      external: ['firebase/firestore', 'firebase/storage'],
     },
   },
 });
