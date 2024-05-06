@@ -1,0 +1,132 @@
+#education {
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: rgb(228 228 241);
+}
+
+#experience {
+  margin-bottom: 3%;
+  padding-top: 4%;
+}
+
+.Header {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  padding-bottom: 2%;
+}
+
+.Header img {
+  width: 35px;
+  height: 35px;
+}
+
+#Ed,
+#Ex {
+  text-align: center;
+  font-size: 170%;
+  font-weight: 600;
+  margin: 0;
+}
+
+.EduDate,
+.ExpDate {
+  display: flex;
+  gap: 5%;
+  margin-left: 3%;
+  align-items: center;
+}
+
+.EduDate h3,
+.EduDate h4,
+.ExpDate h3,
+.ExpDate p {
+  margin-bottom: 0;
+  height: fit-content;
+  width: fit-content;
+}
+
+span {
+  font-size: 105%;
+  margin-right: 2%;
+}
+dl,
+.level {
+  margin-left: 5%;
+  width: 70%;
+}
+
+.level h4 {
+  margin: 0;
+}
+.level p {
+  margin-top: 0;
+}
+
+.level {
+  margin-top: 2%;
+}
+
+dt {
+  font-weight: 550;
+}
+dd {
+  margin-bottom: 2%;
+}
+legend {
+  font-weight: 600;
+  margin-bottom: 0.5%;
+  font-size: 120%;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  .EduDate,
+  .ExpDate {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .Company {
+    margin-top: 0%;
+  }
+
+  dl {
+    margin-left: 4%;
+  }
+
+  dl,
+  .level {
+    width: 90%;
+  }
+  dt {
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+  }
+  dd {
+    margin-left: 0;
+  }
+
+  #education {
+    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0 100%);
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .EduDate h3 {
+    margin: 0;
+  }
+  .EduDate h4 {
+    margin: 0;
+    margin-top: 1%;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 900px) {
+  dl,
+  .level {
+    width: 90%;
+  }
+}

@@ -1,0 +1,155 @@
+#general {
+  width: 100%;
+  height: fit-content;
+  background-color: #f7eff5;
+  color: #3e3535;
+  padding-top: 1%;
+}
+#MyDesc {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5%;
+}
+#infos {
+  margin-left: 4%;
+  width: 70%;
+}
+#imgCv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+.NiniPic {
+  width: 100%;
+  margin-top: 3%;
+}
+p {
+  font-size: 115%;
+}
+span {
+  font-size: 120%;
+  font-weight: 800;
+}
+#myName {
+  margin-left: 20%;
+  font-size: 250%;
+  font-weight: 900;
+}
+.NaBi {
+  margin-left: 15%;
+}
+
+#AboutMe {
+  margin-top: 6%;
+}
+
+#Hobbies,
+#AboutMe {
+  margin-left: 3%;
+  width: 75%;
+}
+#socials {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 1.5%;
+  margin-left: 6%;
+  padding-bottom: 8%;
+}
+.accIcon {
+  width: 50px;
+  height: 50px;
+}
+
+#cv {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  font-size: 90%;
+  margin-top: 3%;
+}
+
+#cvDownload {
+  animation: moveTextUpDown 3s 200;
+}
+
+@keyframes moveTextUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 900px) {
+  #MyDesc,
+  #general {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #MyDesc {
+    margin: 0;
+  }
+
+  #infos {
+    order: 1;
+    text-align: center;
+    width: 90%;
+  }
+
+  #myName {
+    margin: 0;
+    margin-top: 2%;
+    text-align: center;
+  }
+
+  .NaBi {
+    margin: 0;
+    margin-top: 2%;
+  }
+
+  #imgCv {
+    width: 80%;
+  }
+  .NiniPic {
+    width: 80%;
+    margin-top: 0%;
+  }
+
+  span {
+    font-weight: 900;
+  }
+
+  #Hobbies,
+  #AboutMe {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  #socials {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+  }
+
+  .iconsct {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4%;
+  }
+
+  .accIcon {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,240 @@
+#CtSch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 100%;
+  color: #3e3535;
+}
+
+#title {
+  text-align: center;
+}
+
+#ContactName {
+  display: flex;
+  gap: 10%;
+}
+#contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+#contactCt {
+  width: 40%;
+}
+
+.lb {
+  border-radius: 0%;
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  padding-left: 0%;
+  margin-bottom: 3%;
+}
+
+#coder {
+  width: 300px;
+}
+form {
+  width: 100%;
+}
+.ct {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5%;
+  width: max-content;
+}
+
+input {
+  width: 140px;
+  height: 23px;
+  background-color: #f7f7f7;
+  border-radius: 3%;
+}
+
+textarea {
+  border-radius: 3%;
+  width: 365px;
+  height: 100px;
+  background-color: #f7f7f7;
+}
+
+.ctx {
+  margin-top: 4%;
+  margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+}
+
+#msg {
+  background-color: #ffffff;
+  width: max-content;
+  text-align: start;
+}
+
+.bt {
+  display: flex;
+  gap: 5%;
+  margin-top: 6%;
+  justify-content: center;
+}
+
+button {
+  font-size: 120%;
+  padding: 5px 10px;
+}
+#ConfirmMessage {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 80px;
+  background-color: #f3eef5;
+  margin-right: 76px;
+  border-radius: 3%;
+}
+
+#error {
+  color: red;
+  font-weight: 500;
+  font-size: 120%;
+  text-align: center;
+  text-decoration: wavy;
+  margin-top: 3%;
+}
+
+@media only screen and (min-width: 430px) and (max-width: 900px) {
+  #contact {
+    flex-direction: column;
+  }
+
+  #contactCt {
+    width: max-content;
+  }
+  form {
+    width: max-content;
+  }
+
+  #ConfirmMessage {
+    margin-right: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #contact {
+    flex-direction: column;
+  }
+
+  #contactCt {
+    width: max-content;
+  }
+  form {
+    width: max-content;
+  }
+  #coder {
+    width: 250px;
+  }
+
+  textarea {
+    width: 275px;
+  }
+
+  input {
+    width: 115px;
+  }
+
+  #ConfirmMessage {
+    margin-right: 0;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+/*SCHEDULE CSS*/
+
+#scheduleCt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10%;
+}
+
+table {
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+
+th {
+  height: 20px;
+}
+td {
+  width: 100px;
+  height: 45px;
+  border: rgb(145, 141, 141);
+  border-style: solid;
+  border-width: 0.4px;
+  border-radius: 5%;
+  background-color: rgba(236, 236, 247, 0.5);
+}
+
+.time {
+  border: 0;
+  background-color: white;
+  font-weight: 600;
+}
+
+.c6 {
+  background-color: #fdcbf1;
+}
+.c5 {
+  background-color: rgb(191, 191, 228);
+}
+.c4 {
+  background-color: rgb(248, 199, 199);
+}
+.c3 {
+  background-color: rgb(245, 248, 180);
+}
+.c2 {
+  background-color: rgb(174, 235, 249);
+}
+.c1 {
+  background-color: rgb(184, 184, 241);
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  td {
+    width: 65px;
+    height: 36px;
+  }
+  table {
+    border-spacing: 8px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  table {
+    border-spacing: 3px;
+    font-size: 11px;
+  }
+  td {
+    width: 74px;
+    height: 20px;
+    border-radius: 0%;
+    font-size: 9px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  td {
+    width: 60px;
+  }
+}

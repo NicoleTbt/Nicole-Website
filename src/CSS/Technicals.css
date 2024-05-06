@@ -1,0 +1,144 @@
+#Technicals {
+  color: #3e3535;
+}
+
+#skills {
+  margin-bottom: 7%;
+  margin-top: 2%;
+}
+.slider-container {
+  overflow: hidden;
+  width: 70%;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slideSmall {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.slideMedium {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.btprev {
+  padding-right: 8%;
+}
+.btnext {
+  padding-left: 8%;
+}
+
+.Skl {
+  width: max-content;
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Skl:hover {
+  transform: scale(1.1);
+}
+.Skl p {
+  text-align: center;
+  margin: 0;
+}
+
+#skills h1 {
+  text-align: center;
+  font-size: 170%;
+  font-weight: 600;
+  margin: 0;
+}
+
+.Header {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  padding-bottom: 2%;
+}
+
+.Header img {
+  width: 35px;
+  height: 35px;
+}
+.SklIcon {
+  width: 100px;
+  height: 100px;
+}
+#SklLargeDisp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7%;
+  justify-content: center;
+}
+.SklMedDisp {
+  display: flex;
+  justify-content: center;
+}
+
+.SklMedDisp button,
+.SklSmlDisp button {
+  background-color: white;
+  border: 0;
+  font-weight: 700;
+  color: black;
+  font-size: 130%;
+}
+
+.SklSmlDisp {
+  display: flex;
+  justify-content: center;
+}
+
+.smlcont {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.st {
+  width: 30px;
+  height: 30px;
+}
+
+.star21 {
+  transform: rotate(7deg);
+}
+
+.star22 {
+  transform: rotate(-7deg);
+}
+.star31 {
+  transform: translateX(13px);
+}
+
+.star32 {
+  transform: translateY(3px);
+}
+.star33 {
+  transform: translateX(-13px);
+}
+
+.star1,
+.star2Ct,
+.star3Ct {
+  margin-top: 5%;
+}
+
+@media only screen and (max-width: 550px) {
+  .SklIcon {
+    width: 85px;
+    height: 85px;
+  }
+}

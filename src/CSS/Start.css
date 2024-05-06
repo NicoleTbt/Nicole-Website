@@ -1,0 +1,73 @@
+.starry-sky-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to top,
+    rgb(243 243 252) 0%,
+    #fce6f6 1%,
+    rgb(196 196 216) 100%
+  );
+  overflow: hidden;
+  color: #3e3535;
+}
+
+#flower1 {
+  width: 27%;
+  transform: translateX(110%) translateY(-265%) rotate(178deg);
+}
+
+#flower2 {
+  width: 27%;
+  transform: translateX(-117%) translateY(2%) rotate(6deg);
+}
+
+#messagect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 2;
+}
+
+#start {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 200%;
+  animation: stratAnim 5s ease 0s infinite reverse forwards;
+}
+
+@keyframes stratAnim {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0.2;
+  }
+}
+
+#messagect h1 {
+  font-size: 235%;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 450px) {
+  #messagect h1 {
+    font-size: 170%;
+  }
+
+  #start {
+    font-size: 160%;
+  }
+
+  #messagect {
+    margin-top: 88%;
+  }
+}
