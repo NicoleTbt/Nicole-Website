@@ -1,12 +1,7 @@
 import "../CSS/App.css";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import {
-  Routes,
-  Route,
-  BrowserRouter as Router,
-  Outlet,
-} from "react-router-dom";
+import { Routes, Route, HashRouter as Router, Outlet } from "react-router-dom";
 import IntroPage from "./General/Intro";
 import Start from "./Start.jsx";
 import ContactForm from "./Contact/Contact.jsx";
