@@ -89,12 +89,18 @@ button {
   padding: 5px 10px;
 }
 #ConfirmMessage {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 80px;
   background-color: #f3eef5;
   margin-right: 76px;
   border-radius: 3%;
+}
+
+#ConfirmMessage p {
+  margin-left: 6%;
+}
+
+#ConfirmMessage h2 {
+  text-align: center;
+  margin-top: 2%;
 }
 
 #error {
@@ -132,6 +138,9 @@ button {
 
   #contactCt {
     width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   form {
     width: max-content;

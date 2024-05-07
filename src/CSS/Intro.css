@@ -1,18 +1,60 @@
 #general {
   width: 100%;
   height: fit-content;
-  background-color: #f7eff5;
+  background-color: #fff7f7;
   color: #3e3535;
   padding-top: 1%;
 }
+
+#SWE {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#SWE img {
+  animation: swe 15s ease 0s infinite normal forwards;
+}
+
+@keyframes swe {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateY(8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateY(-8px);
+  }
+
+  80% {
+    transform: translateY(-6.4px);
+  }
+
+  90% {
+    transform: translateY(6.4px);
+  }
+}
+
 #MyDesc {
   display: flex;
   justify-content: space-between;
   margin-right: 5%;
 }
 #infos {
-  margin-left: 4%;
+  margin-left: 10%;
   width: 70%;
+  display: flex;
+  flex-direction: column;
 }
 #imgCv {
   display: flex;
@@ -22,7 +64,6 @@
 }
 .NiniPic {
   width: 100%;
-  margin-top: 3%;
 }
 p {
   font-size: 115%;
@@ -41,7 +82,7 @@ span {
 }
 
 #AboutMe {
-  margin-top: 6%;
+  margin-top: 10%;
 }
 
 #Hobbies,
@@ -54,12 +95,20 @@ span {
   align-items: center;
   align-content: center;
   gap: 1.5%;
-  margin-left: 6%;
+  margin-left: 11%;
   padding-bottom: 8%;
 }
+.iconsct {
+  display: flex;
+  gap: 2%;
+}
 .accIcon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.accIcon:hover {
+  transform: scale(1.1);
 }
 
 #cv {
@@ -97,11 +146,25 @@ span {
   #MyDesc {
     margin: 0;
   }
+  #SWE {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #SWE h1 {
+    order: 1;
+    margin-bottom: 10%;
+    text-align: center;
+  }
+
+  #SWE img {
+    order: 2;
+  }
 
   #infos {
     order: 1;
     text-align: center;
-    width: 90%;
+    margin-left: 0;
   }
 
   #myName {
@@ -117,6 +180,7 @@ span {
 
   #imgCv {
     width: 80%;
+    order: 2;
   }
   .NiniPic {
     width: 80%;
@@ -136,8 +200,8 @@ span {
   #socials {
     display: flex;
     flex-direction: column;
-    width: 90%;
     margin: 0;
+    margin-top: 2%;
   }
 
   .iconsct {
@@ -149,7 +213,21 @@ span {
   }
 
   .accIcon {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #SWE img {
+    width: 80%;
+  }
+
+  #SWE h1 {
+    font-size: 160%;
+  }
+
+  #infos {
+    width: 90%;
   }
 }

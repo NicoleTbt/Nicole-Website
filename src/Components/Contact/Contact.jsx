@@ -1,31 +1,16 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "../../CSS/Contact.css";
 import coder from "../Icons/womanCode.gif";
 import Schedule from "./Schedule";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    country: "",
-    number: "",
-    topic: "",
-    message: "",
-  });
+  //Email js Send Email //
+  const form = useRef();
 
+  //error and conditional rendering//
   const [error, setError] = useState("");
   const [submited, setSubmited] = useState(false);
-
-  //on input change remove errors and update the corresponding data//
-  const handleChange = (e) => {
-    setError("");
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
 
   //checks if the number field has letters//
   function hasLetters(input) {
@@ -33,8 +18,8 @@ const ContactForm = () => {
     return regex.test(input);
   }
 
-  //click on submit //
-  const handleSubmit = (e) => {
+  //Input validation and send mail//
+  const sendEmail = (e) => {
     e.preventDefault();
 
     //check if necessary fields are empty --> yes set error then return preventing submission//
@@ -55,21 +40,43 @@ const ContactForm = () => {
       return;
     }
 
-    // Compose the email content to send //
-    const composedEmail = `
-      Name: ${formData.firstName} ${formData.lastName}
-
-      Email: ${formData.email}
-      Number:${formData.country}  ${formData.number}
-      
-      Topic: ${formData.topic}
-      Message: ${formData.message}
-    `;
-
-    console.log(composedEmail);
+    emailjs
+      .sendForm("service_786qg97", "template_leg1vfk", form.current, {
+        publicKey: "VcVrh6VV_uDm1JlSL",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          setError("FAILED...", error.text);
+          return;
+        }
+      );
 
     //set the submitted value to true to let the confirmation box appear//
     setSubmited(true);
+  };
+
+  //Form data setting for message display//
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    country: "",
+    number: "",
+    topic: "",
+    message: "",
+  });
+
+  //on input change remove errors and update the corresponding data//
+  const handleChange = (e) => {
+    setError("");
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   //click on clear to reset the fields//
@@ -85,12 +92,7 @@ const ContactForm = () => {
     });
   };
 
-  const Send = () => {
-    handleClear();
-    setSubmited(false);
-  };
-
-  const Cancel = () => {
+  const Ok = () => {
     setSubmited(false);
   };
 
@@ -100,7 +102,7 @@ const ContactForm = () => {
       <section id="contact">
         <div id="contactCt">
           {!submited && (
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={sendEmail}>
               <div id="ContactName">
                 <div className="ct">
                   <label className="lb">First Name:</label>
@@ -193,6 +195,8 @@ const ContactForm = () => {
           )}
           {submited && (
             <div id="ConfirmMessage">
+              <h2>Thank You for Your Message!!</h2>
+
               <p>
                 <span>Name:</span> {formData.firstName} {formData.lastName}
               </p>
@@ -211,11 +215,8 @@ const ContactForm = () => {
               </p>
 
               <div className="bt">
-                <button id="cancel" onClick={Cancel}>
-                  Cancel
-                </button>
-                <button id="send" onClick={Send}>
-                  Send
+                <button id="ok" onClick={Ok}>
+                  OK!!
                 </button>
               </div>
             </div>
