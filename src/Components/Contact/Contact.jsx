@@ -225,7 +225,6 @@ const ContactForm = () => {
 
         <img src={coder} alt="coding" id="coder" />
       </section>
-      <Schedule />
     </section>
   );
 };
