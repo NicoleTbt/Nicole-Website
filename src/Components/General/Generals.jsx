@@ -86,7 +86,7 @@ const Generals = () => {
       <div id="SWE">
         <img src={SWE} alt="Software Dev" />
         <h1>
-          Hello, I am Nicole Tabet <br /> A Software Developer
+          Hello, I am Nicoles Tabet <br /> A Software Developer
         </h1>
       </div>
 
